@@ -33,7 +33,7 @@ int main () {
     printf("Ingrese el telefono: "); scanf("%d",&prov[i].telefono);
     printf("Ingrese la direccion: "); scanf("%s", prov[i].direccion);
     printf("Ingrese la empresa: "); scanf("%s", prov[i].empresa);
-    printf("Ingrese producto: "); scanf("%s", lista_prod,prov[i].prod[i].pdcto);
+    printf("Ingrese producto: "); scanf("%s", lista_prod[i],prov[i].prod[i].pdcto);
     printf("Ingrese la cantidad vendida: "); scanf("%d", &prov[i].prod[i].cant_vendida);
     printf("Ingrese el costo unitario: "); scanf("%d", &prov[i].prod[i].precio);
     prov[i].prod[i].importe=((prov[i].prod[i].precio)*(prov[i].prod[i].cant_vendida));
@@ -54,19 +54,20 @@ int main () {
     }
 
     printf("El proveedor mas caro es: ");
-    printf("Nombre: %s\n",prov[mayor].nombre);
-    printf("Precio unitario: %d\n",prov[mayor].prod[mayor].precio);
+    printf("\nNombre: %s",prov[mayor].nombre);
+    printf("\nPrecio unitario: %d\n",prov[mayor].prod[mayor].precio);
     printf("\n\n");
 
     printf("El proveedor mas barato es: ");
-    printf("Nombre: %s",prov[menor].nombre);
-    printf("Precio unitario: %d\n",prov[menor].prod[mayor].precio);
+    printf("\nNombre: %s",prov[menor].nombre);
+    printf("\nPrecio unitario: %d\n",prov[menor].prod[menor].precio);
     printf("\n\n");
 
-    printf("Lista de productos: ");
+    printf("Lista de productos: \n\n");
     for (int i=0; i<cant; i++){
-        printf("%s ", lista_prod[i]);
+        printf(" %s \n", lista_prod[i]);
     }
+    printf("\n\n");
 
     return 0;
 }
